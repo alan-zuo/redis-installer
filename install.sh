@@ -15,7 +15,9 @@ fi
 prefix=$1
 port=$2
 
-wget http://download.redis.io/releases/redis-3.2.8.tar.gz
+if [ ! -f "redis-3.2.8.tar.gz" ]; then
+    wget http://download.redis.io/releases/redis-3.2.8.tar.gz
+fi
 tar -zxvf redis-3.2.8.tar.gz
 cd redis-3.2.8
 make
