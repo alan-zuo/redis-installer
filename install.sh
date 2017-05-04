@@ -22,7 +22,6 @@ tar -zxvf redis-3.2.8.tar.gz
 cd redis-3.2.8
 make
 make PREFIX=$prefix install
-rm -rf redis-3.0.3
 cd ..
 cp redis.conf $prefix/redis.conf.template
 cp start.sh stop.sh restart.sh $prefix
